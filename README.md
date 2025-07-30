@@ -51,7 +51,8 @@ InsightFlow is perfect for:
 
 ## 🖼 Demo Screenshots
 
-*(Add 2-3 images here showing upload, charts, and comparisons — place in `/screenshots/` folder)*
+![Dashboard View](sample/Screenshot 2025-07-30 181720.png)
+
 
 ---
 
