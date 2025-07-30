@@ -11,8 +11,8 @@ st.set_page_config(
      layout="wide",
      initial_sidebar_state="expanded",
      menu_items={
-         'Get Help': 'https://github.com/everydaycodings/Data-Analysis-Web-App',
-         'Report a bug': "https://github.com/everydaycodings/Data-Analysis-Web-App/issues/new",
+         'Get Help': 'https://github.com/anmol2905/InsightFlow-Analytics',
+         'Report a bug': "https://github.com/anmol2905/InsightFlow-Analytics/issues/new",
          'About': "# 🚀 InsightFlow Analytics \n *Your gateway to powerful data insights!*"
      }
 )
@@ -743,7 +743,7 @@ if uploaded_file is not None:
 
 else:
     # Welcome screen when no file is uploaded
-    st.markdown("# 🔍 Welcome to InsightFlow Analytics!")
+    st.markdown("# 🔍 InsightFlow Analytics!")
     st.markdown("### 🚀 Your Gateway to Powerful Data Analysis")
     
     col1, col2 = st.columns([2, 1])
