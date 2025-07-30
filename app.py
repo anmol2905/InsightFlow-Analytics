@@ -178,7 +178,7 @@ st.markdown("""
     /* Headers - Professional typography */
     h1, h2, h3 {
         color: #2C3E50 !important;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: -0.5px;
     }
     
