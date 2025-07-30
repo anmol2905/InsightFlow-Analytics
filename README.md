@@ -51,7 +51,9 @@ InsightFlow is perfect for:
 
 ## 🖼 Demo Screenshots
 
-![Dashboard View](sample/Screenshot 2025-07-30 181720.png)
+![](https://github.com/anmol2905/InsightFlow-Analytics/blob/main/sample/Screenshot%202025-07-30%20181818.png)
+
+![](https://github.com/anmol2905/InsightFlow-Analytics/blob/main/sample/Screenshot%202025-07-30%20181844.png)
 
 
 ---
