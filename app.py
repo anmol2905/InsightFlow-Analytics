@@ -20,49 +20,84 @@ st.set_page_config(
 # Custom CSS for theme customization
 st.markdown("""
 <style>
-    /* Base styles – force light appearance */
-    html, body, .stApp {
-        background-color: #FAF8F3 !important;
-        color: #2C3E50 !important;
-    }
-
+    /* Main app background - Professional beige */
     .stApp {
-        background-color: #FAF8F3 !important;
-        background-image:
-            linear-gradient(45deg, rgba(139, 69, 19, 0.02) 25%, transparent 25%),
-            linear-gradient(-45deg, rgba(139, 69, 19, 0.02) 25%, transparent 25%),
-            linear-gradient(45deg, transparent 75%, rgba(139, 69, 19, 0.02) 75%),
+        background-color: #FAF8F3;
+        background-image: 
+            linear-gradient(45deg, rgba(139, 69, 19, 0.02) 25%, transparent 25%), 
+            linear-gradient(-45deg, rgba(139, 69, 19, 0.02) 25%, transparent 25%), 
+            linear-gradient(45deg, transparent 75%, rgba(139, 69, 19, 0.02) 75%), 
             linear-gradient(-45deg, transparent 75%, rgba(139, 69, 19, 0.02) 75%);
         background-size: 60px 60px;
         background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
     }
-
-    /* Sidebar styling */
+    
+    /* Sidebar - Professional dark theme */
     .stSidebar {
-        background: linear-gradient(180deg, #2C3E50 0%, #34495E 100%) !important;
+        background: linear-gradient(180deg, #2C3E50 0%, #34495E 100%);
         border-right: 3px solid #BDC3C7;
     }
-
+    
     .stSidebar .stSidebar-content {
         background: transparent;
     }
-
-    .stSidebar h1, .stSidebar h2, .stSidebar h3,
-    .stSidebar .stMarkdown p,
-    .stSidebar label,
-    .stSidebar .stFileUploader label,
-    .stSidebar .stMultiSelect label,
-    .stSidebar .stSelectbox label,
-    .stSidebar .stTextInput label,
-    .stSidebar .help {
+    
+    /* Sidebar text styling - Enhanced visibility */
+    .stSidebar h1, .stSidebar h2, .stSidebar h3 {
         color: #FFFFFF !important;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
-
+    
+    .stSidebar .stMarkdown p {
+        color: #FFFFFF !important;
+        font-weight: 500;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Sidebar labels and text */
+    .stSidebar label {
+        color: #FFFFFF !important;
+        font-weight: 600;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Sidebar file uploader text */
+    .stSidebar .stFileUploader label {
+        color: #FFFFFF !important;
+        font-weight: 600;
+    }
+    
+    /* Sidebar multiselect label */
+    .stSidebar .stMultiSelect label {
+        color: #FFFFFF !important;
+        font-weight: 600;
+    }
+    
+    /* Sidebar selectbox label */  
+    .stSidebar .stSelectbox label {
+        color: #FFFFFF !important;
+        font-weight: 600;
+    }
+    
+    /* Sidebar text input label */
+    .stSidebar .stTextInput label {
+        color: #FFFFFF !important;
+        font-weight: 600;
+    }
+    
+    /* Sidebar help text */
+    .stSidebar .help {
+        color: #E8E8E8 !important;
+    }
+    
+    /* Sidebar divider */
     .stSidebar hr {
         border-color: #5D6D7E;
         margin: 1rem 0;
     }
-
+    
+    /* Professional button styling */
     .stButton > button {
         background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
         color: white;
@@ -76,87 +111,160 @@ st.markdown("""
         text-transform: uppercase;
         font-size: 0.85rem;
     }
-
+    
     .stButton > button:hover {
         background: linear-gradient(135deg, #2980B9 0%, #1F4E79 100%);
         box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
         transform: translateY(-1px);
     }
-
-    .stDataFrame, .element-container .stDataFrame > div,
-    .stSelectbox > div > div,
-    .stMultiSelect > div > div,
-    .stTextInput > div > div > input,
-    .stFileUploader > div,
-    .streamlit-expanderContent,
-    .js-plotly-plot {
-        background-color: #FFFFFF !important;
-        color: #2C3E50 !important;
+    
+    /* Data containers - Clean white with subtle shadow */
+    .stDataFrame, .element-container .stDataFrame > div {
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        border: 1px solid #E8E8E8;
+        padding: 1rem;
     }
-
+    
+    /* Info boxes - Professional styling */
+    .stAlert {
+        border-radius: 10px;
+        border-left: 4px solid #3498DB;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(5px);
+    }
+    
+    /* Select boxes - Corporate styling */
+    .stSelectbox > div > div {
+        background-color: #FFFFFF;
+        border: 2px solid #D5D8DC;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .stSelectbox > div > div:focus-within {
+        border-color: #3498DB;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    }
+    
+    /* Multiselect - Professional styling */
+    .stMultiSelect > div > div {
+        background-color: #FFFFFF;
+        border: 2px solid #D5D8DC;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .stMultiSelect > div > div:focus-within {
+        border-color: #3498DB;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    }
+    
+    /* Input fields */
+    .stTextInput > div > div > input {
+        background-color: #FFFFFF;
+        border: 2px solid #D5D8DC;
+        border-radius: 8px;
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+    
+    .stTextInput > div > div > input:focus {
+        border-color: #3498DB;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    }
+    
+    /* Headers - Professional typography */
     h1, h2, h3 {
         color: #2C3E50 !important;
         font-weight: 700;
         letter-spacing: -0.5px;
     }
-
+    
     h1 {
         border-bottom: 3px solid #3498DB;
         padding-bottom: 0.5rem;
     }
-
+    
+    /* Metrics and KPI styling */
+    .metric-container {
+        background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        border-left: 4px solid #3498DB;
+    }
+    
+    /* File uploader */
+    .stFileUploader > div {
+        background-color: #FFFFFF;
+        border: 2px dashed #BDC3C7;
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .stFileUploader > div:hover {
+        border-color: #3498DB;
+        background-color: #F8F9FA;
+    }
+    
+    /* Radio buttons - Corporate style */
+    .stRadio > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+        padding: 1rem;
+        border: 1px solid #E8E8E8;
+    }
+    
+    /* Expander - Professional */
     .streamlit-expanderHeader {
         background-color: #34495E;
         color: white;
+        border-radius: 8px;
+        font-weight: 600;
     }
-
+    
+    .streamlit-expanderContent {
+        background-color: #FFFFFF;
+        border: 1px solid #E8E8E8;
+        border-radius: 0 0 8px 8px;
+    }
+    
+    /* Charts background */
+    .js-plotly-plot {
+        background-color: #FFFFFF !important;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Footer styling */
     .stMarkdown p {
         color: #5D6D7E;
     }
-
-    /* Scrollbar */
+    
+    /* Custom scrollbar */
     ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
     }
-
+    
     ::-webkit-scrollbar-track {
         background: #F1F2F6;
+        border-radius: 4px;
     }
-
+    
     ::-webkit-scrollbar-thumb {
         background: #BDC3C7;
+        border-radius: 4px;
     }
-
+    
     ::-webkit-scrollbar-thumb:hover {
         background: #95A5A6;
     }
-
-    /* =====================
-       DARK MODE OVERRIDE
-       ===================== */
-    @media (prefers-color-scheme: dark) {
-        html, body, .stApp {
-            background-color: #FAF8F3 !important;
-            color: #2C3E50 !important;
-        }
-
-        .stDataFrame, .element-container .stDataFrame > div,
-        .streamlit-expanderContent,
-        .stFileUploader > div,
-        .stSelectbox > div > div,
-        .stMultiSelect > div > div,
-        .stTextInput > div > div > input,
-        .js-plotly-plot {
-            background-color: #FFFFFF !important;
-            color: #2C3E50 !important;
-        }
-
-        .stMarkdown p, h1, h2, h3 {
-            color: #2C3E50 !important;
-        }
-    }
 </style>
+
 """, unsafe_allow_html=True)
 
 st.sidebar.title("🔍 InsightFlow Analytics")
