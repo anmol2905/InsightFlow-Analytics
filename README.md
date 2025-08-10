@@ -66,4 +66,4 @@ cd Insightflow-Analytics
 pip install -r requirements.txt
 streamlit run app.py
 
-Inspiration of this project came from https://github.com/everydaycodings/Data-Analysis-Web-App
+
